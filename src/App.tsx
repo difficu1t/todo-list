@@ -1,9 +1,11 @@
 import React from 'react'
+import MyNavBar from './commponents/MyNavBar/MyNavBar'
 
-function App() {
+const App:React.FC = () => {
 
   return (
     <>
+      <MyNavBar />
     </>
   )
 }
