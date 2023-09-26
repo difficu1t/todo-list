@@ -3,6 +3,7 @@ export interface ToDoState {
 }
 
 export interface ITask {
+  id: number;
   text: string;
   done: boolean;
 }

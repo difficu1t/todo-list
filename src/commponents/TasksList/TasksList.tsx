@@ -1,7 +1,8 @@
 import React from 'react'
-import { List, ListItem } from '@mui/material'
+import { List } from '@mui/material'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import { Category } from '../../types/Category';
+import TaskListItem from '../TaskListItem/TaskListItem';
 
 const TaskList: React.FC = () => {
 
@@ -10,19 +11,21 @@ const TaskList: React.FC = () => {
   const category = categorys.find(category => category.active);
 
   return (
-    <List>
+    <List sx={{
+      maxWidth: 500
+    }}>
       {tasks.map(task => {
-          if(category){
-            if(category.name === Category.ACTIVE){
-              if(!task.done)
-                return <ListItem key={task.id}>{task.text}</ListItem>
-            } else if(category.name === Category.COMPLITED) {
-              if(task.done)
-                return <ListItem key={task.id}>{task.text}</ListItem>
-            } else 
-              return <ListItem key={task.id}>{task.text}</ListItem>
-          }
-        })}
+        if(category){
+          if(category.name === Category.ACTIVE){
+            if(!task.done)
+              return <TaskListItem key={task.id} task={task}>{task.text}</TaskListItem>
+          } else if(category.name === Category.COMPLITED) {
+            if(task.done)
+              return <TaskListItem key={task.id} task={task}>{task.text}</TaskListItem>
+          } else 
+            return <TaskListItem key={task.id} task={task}>{task.text}</TaskListItem>
+        }
+      })}
     </List>
   )
 }

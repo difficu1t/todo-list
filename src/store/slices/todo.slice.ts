@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 import { ToDoState } from '../../types/ToDoList'
 
 const initialState: ToDoState = {
@@ -13,7 +13,12 @@ export const todoSlice = createSlice({
   name: 'todo',
   initialState,
   reducers: {
-
+    changeStatus: (state, action: PayloadAction<number>) => {
+      for (let task of state.tasks) {
+        if (task.id === action.payload)
+          task.done = !task.done;
+      }
+    }
   }
 })
 

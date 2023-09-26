@@ -11,5 +11,5 @@ export interface ICategory {
 export enum Category {
   ALL = "all",
   ACTIVE = "active",
-  COMPLITED = "completed"
+  COMPLITED = "complited"
 }

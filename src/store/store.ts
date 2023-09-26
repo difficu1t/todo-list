@@ -3,10 +3,11 @@ import categoryReducer from './slices/category.slice'
 import todoReducer from './slices/todo.slice'
 
 export const store = configureStore({
+  devTools: true,
   reducer: {
     tasks: todoReducer,
     categorys: categoryReducer
-  }
+  },
 })
 
 export type RootState = ReturnType<typeof store.getState>
