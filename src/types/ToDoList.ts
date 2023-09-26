@@ -1,3 +1,8 @@
 export interface ToDoState {
-  list: [];
+  tasks: ITask[];
+}
+
+export interface ITask {
+  text: string;
+  done: boolean;
 }

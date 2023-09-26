@@ -7,3 +7,9 @@ export interface ICategory {
   name: string;
   active: boolean;
 }
+
+export enum Category {
+  ALL = "all",
+  ACTIVE = "active",
+  COMPLITED = "completed"
+}

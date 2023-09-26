@@ -15,7 +15,8 @@ const MyNavBar: React.FC = () => {
 
   return (
     <Box component='nav'>
-      <AppBar sx={{  
+      <AppBar sx={{ 
+        position: 'static', 
         backgroundColor: 'white', 
         boxShadow: 'none'
       }}>

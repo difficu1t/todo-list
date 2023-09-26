@@ -2,7 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 import { ToDoState } from '../../types/ToDoList'
 
 const initialState: ToDoState = {
-  list: []
+  tasks: [
+    {id: 0, text: "Домашка", done: false},
+    {id: 1, text: "Уборка", done: true},
+    {id: 2, text: "Мусор", done: true},
+  ]
 }
 
 export const todoSlice = createSlice({
@@ -12,3 +16,6 @@ export const todoSlice = createSlice({
 
   }
 })
+
+export const { actions } = todoSlice;
+export default todoSlice.reducer;
