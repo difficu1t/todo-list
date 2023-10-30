@@ -3,9 +3,9 @@ import { ToDoState } from '../../types/ToDoList'
 
 const initialState: ToDoState = {
   tasks: [
-    {id: 0, text: "Домашка", done: false},
-    {id: 1, text: "Уборка", done: true},
-    {id: 2, text: "Мусор", done: true},
+    {id: 0, text: "HomeWork", done: false},
+    {id: 1, text: "Cleaning", done: true},
+    {id: 2, text: "TV", done: true},
   ]
 }
 

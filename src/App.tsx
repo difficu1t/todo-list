@@ -1,14 +1,17 @@
 import React from 'react'
 import MyNavBar from './commponents/MyNavBar/MyNavBar'
 import TaskList from './commponents/TasksList/TasksList'
+import './global.css'
 
 const App:React.FC = () => {
 
   return (
-    <>
-      <MyNavBar />
-      <TaskList />
-    </>
+    <div className='todoContainer'>
+      <div>
+        <MyNavBar />
+        <TaskList />
+      </div>
+    </div>
   )
 }
 
